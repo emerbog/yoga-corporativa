@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yoga Corporativa Imersiva — GMark × EBR</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#1A1025; --muted:#5A6472; --pink:#C2255C; --pink-soft:#FDEFF5;
+    --violet:#7048A8; --teal:#0B7285; --paper:#FBFAF8; --line:#E9E2EE;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{font-family:'Inter',system-ui,Arial,sans-serif;background:var(--paper);color:var(--ink);}
+  .wrap{max-width:1100px;margin:0 auto;padding:0 22px;}
+  .hero{position:relative;background:linear-gradient(150deg,#1A1025 0%,#2A1438 55%,#3D1240 100%);color:#fff;overflow:hidden;}
+  .hero .wrap{display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:center;padding-top:64px;padding-bottom:64px;}
+  @media(max-width:880px){.hero .wrap{grid-template-columns:1fr;}}
+  .hero img{width:100%;border-radius:20px;box-shadow:0 30px 60px rgba(0,0,0,.4);}
+  .brandrow{display:flex;align-items:center;gap:10px;margin-bottom:26px;flex-wrap:wrap;}
+  .bx{font-family:'Poppins';font-weight:800;font-size:12.5px;padding:7px 14px;border-radius:9px;}
+  .bx.g{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.3);color:#fff;}
+  .bx.e{background:var(--pink);color:#fff;}
+  .bx.x{color:#B9A8C9;font-size:15px;padding:0;}
+  .kicker{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:#E6A9C4;font-weight:700;margin-bottom:14px;}
+  h1{font-family:'Poppins';font-size:clamp(26px,4vw,40px);font-weight:800;line-height:1.15;margin-bottom:18px;}
+  .lead{font-size:16px;line-height:1.65;color:#D8C9E4;max-width:520px;}
+  .lead b{color:#fff;}
+  .pills{margin-top:22px;display:flex;gap:8px;flex-wrap:wrap;}
+  .pill{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25);padding:6px 14px;border-radius:20px;font-size:12.5px;}
+  .cta-row{display:flex;gap:12px;margin-top:26px;flex-wrap:wrap;}
+  .btn{border:none;border-radius:12px;padding:14px 24px;font-family:'Poppins';font-weight:700;font-size:14px;cursor:pointer;text-decoration:none;display:inline-block;transition:.15s;}
+  .btn-pink{background:var(--pink);color:#fff;}
+  .btn-pink:hover{filter:brightness(1.1);}
+  .btn-ghost{background:rgba(255,255,255,.1);color:#fff;border:1px solid rgba(255,255,255,.3);}
+  section{padding:64px 0;}
+  .kicker2{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--pink);font-weight:700;margin-bottom:10px;}
+  h2{font-family:'Poppins';font-size:clamp(22px,3vw,30px);font-weight:800;margin-bottom:14px;}
+  .lead2{font-size:15.5px;line-height:1.65;color:var(--muted);max-width:760px;}
+  .lead2 b{color:var(--ink);}
+  .moments{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:34px;}
+  @media(max-width:880px){.moments{grid-template-columns:repeat(2,1fr);}}
+  .mom{background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px 20px;}
+  .mom .n{width:30px;height:30px;border-radius:50%;background:var(--pink);color:#fff;font-family:'Poppins';font-weight:800;display:flex;align-items:center;justify-content:center;margin-bottom:14px;font-size:14px;}
+  .mom h3{font-family:'Poppins';font-size:15px;margin-bottom:8px;}
+  .mom p{font-size:13px;line-height:1.55;color:var(--muted);}
+  .packs{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:34px;align-items:stretch;}
+  @media(max-width:880px){.packs{grid-template-columns:1fr;}}
+  .pack{background:#fff;border:1.5px solid var(--line);border-radius:20px;padding:26px 24px;display:flex;flex-direction:column;position:relative;}
+  .pack.hot{border-color:var(--pink);box-shadow:0 16px 40px rgba(194,37,92,.12);}
+  .pack .badge{position:absolute;top:-12px;left:24px;background:var(--pink);color:#fff;font-size:10.5px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:5px 12px;border-radius:20px;}
+  .pack h3{font-family:'Poppins';font-size:17px;margin-bottom:4px;}
+  .pack .sub{font-size:12.5px;color:var(--muted);margin-bottom:18px;}
+  .pack .price{font-family:'Poppins';font-weight:800;font-size:26px;margin-bottom:2px;}
+  .pack .price small{font-size:13px;font-weight:600;color:var(--muted);}
+  .pack .from{font-size:11.5px;color:var(--muted);margin-bottom:18px;}
+  .pack ul{list-style:none;margin-bottom:22px;flex:1;}
+  .pack li{font-size:13.5px;line-height:1.5;color:#3A4552;margin-bottom:10px;padding-left:22px;position:relative;}
+  .pack li::before{content:"✓";position:absolute;left:0;color:var(--pink);font-weight:800;}
+  .pack li.off{color:#B0AAB8;}
+  .pack li.off::before{content:"—";color:#C9C2CE;}
+  .pack .btn{width:100%;text-align:center;}
+  .note-packs{font-size:12px;color:var(--muted);margin-top:18px;line-height:1.6;}
+  .tech{background:linear-gradient(150deg,#1A1025,#2A1438);border-radius:24px;color:#fff;padding:44px 40px;margin-top:10px;}
+  .tech .kicker2{color:#E6A9C4;}
+  .techgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:26px;}
+  @media(max-width:680px){.techgrid{grid-template-columns:1fr;}}
+  .techgrid .t{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:14px;padding:18px 20px;}
+  .techgrid h3{font-family:'Poppins';font-size:14.5px;margin-bottom:6px;}
+  .techgrid p{font-size:13px;line-height:1.55;color:#D8C9E4;}
+  .contact{background:var(--pink-soft);border:1px solid #F5D6E2;border-radius:24px;padding:44px 40px;text-align:center;}
+  .contact h2{margin-bottom:10px;}
+  .contact .lead2{margin:0 auto 24px;}
+  .contact .btn{font-size:15px;padding:16px 34px;}
+  footer{padding:28px 0 44px;font-size:12px;color:#98A2AC;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;}
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="wrap">
+    <div>
+      <div class="brandrow"><span class="bx g">GMARK</span><span class="bx x">×</span><span class="bx e">EBR EVENTOS</span></div>
+      <div class="kicker">Bem-estar corporativo · Outubro 2026</div>
+      <h1>Yoga Corporativa Imersiva</h1>
+      <p class="lead">Sua equipe desacelera de verdade: <b>palestra + prática guiada + cenografia audiovisual</b> — som, projeção e iluminação em sincronia com a respiração. Uma experiência de evento, não uma aula em sala.</p>
+      <div class="pills"><span class="pill">🧘 Professora certificada</span><span class="pill">🎬 LED + som + luz</span><span class="pill">⏱️ 45–60 min</span></div>
+      <div class="cta-row">
+        <a class="btn btn-pink" href="#pacotes">Ver pacotes</a>
+        <a class="btn btn-ghost" href="#contato">Agende a Outubro Rosa</a>
+      </div>
+    </div>
+    <img src="yoga-hero-experiencia.jpg" alt="Yoga Corporativa Imersiva">
+  </div>
+</div>
+
+<section id="experiencia">
+  <div class="wrap">
+    <div class="kicker2">A experiência</div>
+    <h2>Quatro momentos, uma jornada</h2>
+    <p class="lead2">Empresas querem bem-estar, mas aulas avulsas não criam presença. Aqui o <b>ambiente conduz</b> — cenografia reativa, trilha desenhada e luz sincronizada levam o grupo ao momento presente sem esforço.</p>
+    <div class="moments">
+      <div class="mom"><div class="n">1</div><h3>Palestra — o porquê</h3><p>15–20 min sobre exercício laboral e yoga: postura, respiração, estresse e sono. Linguagem corporativa, ciência acessível.</p></div>
+      <div class="mom"><div class="n">2</div><h3>Imersão audiovisual</h3><p>A professora conduz e o cenário responde: cenas no telão ou LED reagem à prática em tempo real.</p></div>
+      <div class="mom"><div class="n">3</div><h3>Prática coletiva</h3><p>Todos de pé nos mats, guiados pela professora — sequência acessível, sem troca de roupa, no próprio ambiente da empresa.</p></div>
+      <div class="mom"><div class="n">4</div><h3>Integração</h3><p>Respiração guiada em penumbra com trilha imersiva — o momento-assinatura que a equipe leva para casa.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="pacotes" style="padding-top:0;">
+  <div class="wrap">
+    <div class="kicker2">Pacotes</div>
+    <h2>Do piloto ao programa anual</h2>
+    <p class="lead2">Três formas de contratar — a experiência completa com produção audiovisual, ou a versão essencial sem AV. Valores sob consulta por tamanho do grupo e cidade.</p>
+    <div class="packs">
+      <div class="pack">
+        <h3>Essencial</h3>
+        <div class="sub">Sem audiovisual — o bem-estar puro</div>
+        <div class="price">Sob consulta<small> / sessão</small></div>
+        <div class="from">ideal para equipes até 25 pessoas</div>
+        <ul>
+          <li>Palestra de abertura (15–20 min)</li>
+          <li>Prática guiada coletiva (25–30 min)</li>
+          <li>Música ambiente + voz com caixa portátil</li>
+          <li>Mats fornecidos para até 25 pessoas</li>
+          <li class="off">— Cenografia audiovisual (LED/projeção)</li>
+          <li class="off">— Iluminação cenográfica sincronizada</li>
+          <li class="off">— Registro audiovisual do evento</li>
+        </ul>
+        <a class="btn btn-ghost" style="background:#F1ECF5;color:#7048A8;border:none;" href="#contato">Solicitar proposta</a>
+      </div>
+      <div class="pack hot">
+        <div class="badge">Mais contratado</div>
+        <h3>Imersiva</h3>
+        <div class="sub">A experiência completa — com audiovisual</div>
+        <div class="price">Sob consulta<small> / sessão</small></div>
+        <div class="from">até 60 pessoas · 45–60 min</div>
+        <ul>
+          <li>Tudo do Essencial</li>
+          <li>Cenografia audiovisual: telão ou painel de LED</li>
+          <li>Cenas reativas à prática (mandalas, cenários)</li>
+          <li>Som espacializado + voz da professora em headset</li>
+          <li>Iluminação cenográfica sincronizada</li>
+          <li>Registro audiovisual (fotos + vídeo resumo)</li>
+        </ul>
+        <a class="btn btn-pink" href="#contato">Solicitar proposta</a>
+      </div>
+      <div class="pack">
+        <h3>Programa Bem-Estar</h3>
+        <div class="sub">Ciclo mensal — presença vira hábito</div>
+        <div class="price">Sob consulta<small> / mês</small></div>
+        <div class="from">1 sessão/mês · temas rotativos · 12 meses</div>
+        <ul>
+          <li>Sessão Imersiva mensal (até 60 pessoas)</li>
+          <li>Temas rotativos: respiração, postura, sono, foco</li>
+          <li>Tecnologia fixa instalada no espaço do cliente</li>
+          <li>Materiais de continuidade (vídeos + cards)</li>
+          <li>Relatório de participação por sessão</li>
+          <li>Condições especiais de ciclo anual</li>
+        </ul>
+        <a class="btn btn-ghost" style="background:#F1ECF5;color:#7048A8;border:none;" href="#contato">Solicitar proposta</a>
+      </div>
+    </div>
+    <p class="note-packs"><b>Yoga em eventos:</b> a sessão também entra dentro de convenções, kick-offs e bienais como abertura ou interlúdio energético — som e LED já contratados, agregamos a experiência. <b>Formato estendido:</b> seminário + vivência em meio período, com 2 sessões práticas e materiais de continuidade.</p>
+  </div>
+</section>
+
+<section style="padding-top:0;">
+  <div class="wrap">
+    <div class="tech">
+      <div class="kicker2">Execução técnica — EBR Eventos</div>
+      <h2 style="color:#fff;">Tudo o que sustenta a experiência</h2>
+      <div class="techgrid">
+        <div class="t"><h3>🎬 Projeção & LED</h3><p>Telão ou painel de LED conforme o espaço; cenas em vídeo com transições suaves guiadas pela professora (controle em tablet no palco).</p></div>
+        <div class="t"><h3>🔊 Som espacializado</h3><p>Trilha desenhada para prática (bpm decrescente), voz da professora em headset com clareza total.</p></div>
+        <div class="t"><h3>💡 Iluminação cenográfica</h3><p>Cenas de luz em sincronia com a prática — pico energético nas posturas ativas, penumbra imersiva na respiração final.</p></div>
+        <div class="t"><h3>🎥 Registro audiovisual</h3><p>Captação multicâmera opcional: o material vira conteúdo interno da empresa (comunicação, RH, redes sociais).</p></div>
+      </div>
+      <p style="font-size:13px;color:#D8C9E4;margin-top:22px;line-height:1.6;"><b style="color:#fff;">Montagem:</b> estrutura modular — instalação em 3–4 horas, sem intervenção no layout do cliente. Equipe: técnico de projeção + técnico de som/luz + professora + apoio.</p>
+    </div>
+  </div>
+</section>
+
+<section id="contato" style="padding-top:0;">
+  <div class="wrap">
+    <div class="contact">
+      <h2>Agende a experiência Outubro Rosa</h2>
+      <p class="lead2">Vagas limitadas em outubro — traga a experiência de bem-estar que sua equipe comenta na segunda-feira.</p>
+      <a class="btn btn-pink" href="https://wa.me/5511973202121">Falar com a GMark no WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap" style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;">
+    <span>GMark × EBR Eventos — Yoga Corporativa Imersiva</span>
+    <span>Outubro 2026</span>
+  </div>
+</footer>
+
+</body>
+</html>
